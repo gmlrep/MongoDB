@@ -26,6 +26,8 @@ async def get_input_data(message: Message):
         if output_data is None:
             await message.answer(text=error_text)
         else:
-            await message.answer(text=f'{output_data}')
+            new_output_data = f"{output_data}"
+            new_output_data = new_output_data.replace("'", '"')
+            await message.answer(text=new_output_data)
     except NameError:
         await message.answer(text=error_text)

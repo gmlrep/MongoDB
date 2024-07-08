@@ -57,4 +57,4 @@ async def async_get_pay(data: dict) -> dict | None:
             value_sum += int(o['value'])
         dataset.append(value_sum)
     labels = [label.isoformat() for label in labels]
-    return {'dataset': dataset, 'labels': labels}
+    return {"dataset": dataset, "labels": labels}
